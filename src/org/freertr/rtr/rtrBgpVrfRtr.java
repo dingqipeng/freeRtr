@@ -558,7 +558,7 @@ public class rtrBgpVrfRtr extends ipRtr {
             if (ntry.best.pmsiTun.length < 4) {
                 continue;
             }
-            if (ntry.best.pmsiTyp != 2) {
+            if ((ntry.best.pmsiTyp & 0xff) != 2) {
                 continue;
             }
             if (need.compareTo(ntry.prefix) != 0) {
